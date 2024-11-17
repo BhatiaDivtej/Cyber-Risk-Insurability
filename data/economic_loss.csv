@@ -1,0 +1,15 @@
+Case Type,Case Count (Economic Loss),Loss Amount (Economic Loss)
+Data - Malicious Breach,667,15669566
+Privacy - Unauthorized Contact or Disclosure,5,524120
+Data - Physically Lost or Stolen,41,2078884
+Data - Unintentional Disclosure,9,38713
+Network/Website Disruption,215,4018173
+Identity - Fraudulent Use/Account Access,989,14409001
+Privacy - Unauthorized Data Collection,3,32012
+"Phishing, Spoofing, Social Engineering",278,1132811
+"Skimming, Physical Tampering",98,63908
+IT - Processing Errors,33,1493802
+Cyber Extortion,8675,271472
+IT - Configuration/Implementation Errors,20,473471
+Industrial Controls & Operations,6,188188
+Total,11041,40644124

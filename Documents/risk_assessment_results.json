@@ -1,0 +1,10 @@
+{
+ "company_name": "testing123",
+ "expected_total_loss": 437326.5087566246,
+ "expected_subcategory_losses": {
+  "Response Costs": 40042.14685844748,
+  "Litigated Cases": 95295.06183389222,
+  "Fines & Penalties": 87651.3128482273,
+  "Economic Loss": 214337.98721605758
+ }
+}

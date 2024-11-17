@@ -1,0 +1,14 @@
+Affected Count Range,With Affected Count,With no Affected Count,Total
+Industrial Controls & Operations,25,120,145
+Undetermined/Other,382,151,533
+IT - Processing Errors,556,474,1030
+Identity - Fraudulent Use/Account Access,736,345,1081
+IT - Configuration/Implementation Errors,750,665,1415
+"Skimming, Physical Tampering",680,854,1534
+Privacy - Unauthorized Data Collection,1125,581,1706
+"Phishing, Spoofing, Social Engineering",3745,1313,5058
+Network/Website Disruption,1031,6923,7954
+Data - Physically Lost or Stolen,8407,1718,10125
+Data - Unintentional Disclosure,18260,4192,22452
+Privacy - Unauthorized Contact or Disclosure,37719,4621,42340
+Data - Malicious Breach,45341,16714,62055

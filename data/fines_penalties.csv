@@ -1,0 +1,15 @@
+Case Type,Case Count (Fines & Penalties),Loss Amount (Fines & Penalties)
+Data - Malicious Breach,543,2674547.0
+Privacy - Unauthorized Contact or Disclosure,1306,2316381.0
+Data - Physically Lost or Stolen,46,26690.0
+Data - Unintentional Disclosure,248,467718.0
+Network/Website Disruption,11,23462.0
+Identity - Fraudulent Use/Account Access,29,379629.0
+Privacy - Unauthorized Data Collection,172,7408302.0
+"Phishing, Spoofing, Social Engineering",23,1178045.0
+"Skimming, Physical Tampering",3,175.0
+IT - Processing Errors,26,1704319.0
+Cyber Extortion,8676,
+IT - Configuration/Implementation Errors,43,430707.0
+Industrial Controls & Operations,3,11019.0
+Total,2453,16620996.0

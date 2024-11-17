@@ -1,0 +1,15 @@
+Case Type,Case Count (Response Costs),Loss Amount (Response Costs)
+Data - Malicious Breach,206.0,4046940.0
+Privacy - Unauthorized Contact or Disclosure,1.0,700.0
+Data - Physically Lost or Stolen,15.0,86365.0
+Data - Unintentional Disclosure,13.0,4902.0
+Network/Website Disruption,114.0,2092951.0
+Identity - Fraudulent Use/Account Access,1.0,45.0
+Privacy - Unauthorized Data Collection,,
+"Phishing, Spoofing, Social Engineering",21.0,76784.0
+"Skimming, Physical Tampering",6.0,26274.0
+IT - Processing Errors,7.0,907548.0
+Cyber Extortion,1.0,177.0
+IT - Configuration/Implementation Errors,7.0,349172.0
+Industrial Controls & Operations,3.0,1187.0
+Total,395.0,7593045.0

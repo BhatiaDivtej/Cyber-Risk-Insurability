@@ -1,0 +1,15 @@
+Case Type,Case Count (Litigated Cases),Loss Amount (Litigated Cases)
+Data - Malicious Breach,398.0,5029375.0
+Privacy - Unauthorized Contact or Disclosure,2590.0,7572005.0
+Data - Physically Lost or Stolen,35.0,180918.0
+Data - Unintentional Disclosure,96.0,242773.0
+Network/Website Disruption,7.0,14219.0
+Identity - Fraudulent Use/Account Access,35.0,26490.0
+Privacy - Unauthorized Data Collection,245.0,7408302.0
+"Phishing, Spoofing, Social Engineering",30.0,742363.0
+"Skimming, Physical Tampering",9.0,75672.0
+IT - Processing Errors,8.0,305749.0
+Cyber Extortion,,
+IT - Configuration/Implementation Errors,28.0,230203.0
+Industrial Controls & Operations,1.0,7.0
+Total,3555.0,18070452.0

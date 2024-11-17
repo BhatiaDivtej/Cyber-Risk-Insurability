@@ -1,0 +1,72 @@
+{
+ "businessQuestions": {
+  "name": "Anirudh",
+  "phone": "9876543211",
+  "email": "anir@test.com",
+  "companyName": "meta",
+  "country": "India",
+  "region": "Uttarakhand",
+  "primaryIndustry": "48",
+  "employeeCount": "1-50",
+  "annualRevenue": "$10 million - $100 million",
+  "revenue2023": "",
+  "revenue2022": "3",
+  "cybersecurityBudget": "13",
+  "regulations": [
+   "SEC",
+   "HIPAA"
+  ],
+  "recentBreach": "Within the last 12 months",
+  "incidentCount": "21",
+  "dataExposed": [
+   "Personal Records",
+   "Credit Card Details"
+  ],
+  "recordsExposed": "1-50",
+  "incidentFixed": "No",
+  "insuranceCarrier": "12test",
+  "lossBasisType": "Occurrence-based",
+  "existingDeductibles": "34",
+  "coverages": {
+   "incidentResponse": {
+    "coverage": "98",
+    "deductible": "77"
+   },
+   "cyberExtortion": {
+    "coverage": "6",
+    "deductible": "5"
+   },
+   "businessEmail": {
+    "coverage": "4",
+    "deductible": "32"
+   },
+   "businessInterruption": {
+    "coverage": "8",
+    "deductible": "2"
+   },
+   "liability": {
+    "coverage": "64",
+    "deductible": "3"
+   }
+  }
+ },
+ "assessmentData": {
+  "assessmentType": "PenTest",
+  "assessmentScore": 24.75614035087718
+ },
+ "securityQuestions": {
+  "materialBreach": "Yes",
+  "remoteAccess": "No",
+  "securityPlanPractice": "Quarterly",
+  "securityTraining": "Biannually",
+  "incidentResponseTraining": "Quarterly",
+  "riskAssessment": "Monthly",
+  "necessaryPatches": "Yes",
+  "dataEncryption": "No",
+  "dataBacking": "Weekly/Daily",
+  "thirdPartyControls": "No",
+  "securityAlerts": "Response is within the day",
+  "edrTools": "Yes",
+  "edrToolsUsed": "Microsoft Defender"
+ }
+}
