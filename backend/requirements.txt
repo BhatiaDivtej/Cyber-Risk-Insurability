@@ -27,6 +27,7 @@ future==1.0.0
 gast==0.6.0
 gevent==24.11.1
 greenlet==3.1.1
+gunicorn==23.0.0
 h5netcdf==1.4.1
 h5py==3.12.1
 idna==3.10
@@ -61,7 +62,7 @@ pythran==0.17.0
 pytz==2024.2
 requests==2.32.3
 requests-file==2.1.0
-scipy==1.7.3
+scipy==1.14.1
 semver==3.0.2
 six==1.16.0
 Theano==1.0.5
