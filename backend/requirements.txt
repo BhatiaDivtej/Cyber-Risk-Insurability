@@ -1,6 +1,6 @@
 # Core numerical packages
 numpy==1.22.4
-scipy==1.8.1
+scipy>=1.8.1
 pandas==1.4.3
 
 # PyMC and its dependencies
