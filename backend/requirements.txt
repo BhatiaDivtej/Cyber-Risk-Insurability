@@ -4,7 +4,7 @@ scipy==1.8.1
 pandas==1.4.3
 
 # PyMC and its dependencies
-pymc3==3.11.5
+pymc==5.12.0
 Theano-PyMC==1.1.2
 pytensor==2.14.2
 arviz==0.12.1
