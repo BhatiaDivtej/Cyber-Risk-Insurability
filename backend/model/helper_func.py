@@ -112,13 +112,14 @@ def load_questionnaire_data(json_file):
 
 def load_historical_data():
     # Load affected count ranges
-    affected_counts_df = pd.read_csv('../data/affected_count_range.csv')
-
+    affected_counts_df = pd.read_csv('./data/affected_count_range.csv')
+    #/Users/belagaam/Desktop/Cyber Risk Insurability/Cyber-Risk-Insurability/backend/data
+    #/Users/belagaam/Desktop/Cyber Risk Insurability/Cyber-Risk-Insurability/backend/model/helper_func.py
     # Load subcategory data (response costs, litigated cases, fines & penalties)
-    response_costs_df = pd.read_csv('../data/response_costs.csv')
-    litigated_cases_df = pd.read_csv('../data/litigated_cases.csv')
-    fines_penalties_df = pd.read_csv('../data/fines_penalties.csv')
-    economic_loss_df = pd.read_csv('../data/economic_loss.csv')
+    response_costs_df = pd.read_csv('./data/response_costs.csv')
+    litigated_cases_df = pd.read_csv('./data/litigated_cases.csv')
+    fines_penalties_df = pd.read_csv('./data/fines_penalties.csv')
+    economic_loss_df = pd.read_csv('./data/economic_loss.csv')
 
     return affected_counts_df, response_costs_df, litigated_cases_df, fines_penalties_df, economic_loss_df
 

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 import json
 from model.financial_services_finloss import model
 from model.parser import PentestReportParser
@@ -7,6 +7,18 @@ import os
 
 app = Flask(__name__)
 CORS(app)
+
+frontend_folder = os.path.join(os.getcwd(),'..','frontend')
+dist_folder = os.path.join(frontend_folder, 'dist')
+
+# server static files from the dist folder under the frontend directory
+@app.route('/',defaults={'filename':''})
+@app.route('/<path:filename>')
+
+def index(filename):
+    if not filename:
+        filename = 'index.html'
+    return send_from_directory(dist_folder, filename)
 
 # Configure upload folder
 UPLOAD_FOLDER = 'uploads'
