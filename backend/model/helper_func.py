@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import lognorm
 import scipy.stats as stats
-import pymc3 as pm
+import pymc as pm
 import warnings
 import logging
 import json
@@ -113,8 +113,7 @@ def load_questionnaire_data(json_file):
 def load_historical_data():
     # Load affected count ranges
     affected_counts_df = pd.read_csv('./data/affected_count_range.csv')
-    #/Users/belagaam/Desktop/Cyber Risk Insurability/Cyber-Risk-Insurability/backend/data
-    #/Users/belagaam/Desktop/Cyber Risk Insurability/Cyber-Risk-Insurability/backend/model/helper_func.py
+
     # Load subcategory data (response costs, litigated cases, fines & penalties)
     response_costs_df = pd.read_csv('./data/response_costs.csv')
     litigated_cases_df = pd.read_csv('./data/litigated_cases.csv')
