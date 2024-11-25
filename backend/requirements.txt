@@ -1,3 +1,4 @@
+arviz==0.13.0
 beniget==0.4.2.post1
 blinker==1.9.0
 cachetools==5.5.0
@@ -61,7 +62,7 @@ pythran==0.17.0
 pytz==2024.2
 requests==2.32.3
 requests-file==2.1.0
-scipy==1.7.3
+scipy==1.8.0
 semver==3.0.2
 six==1.16.0
 Theano==1.0.5
