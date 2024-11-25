@@ -41,7 +41,7 @@ MarkupSafe==3.0.2
 matplotlib==3.8.4
 miniKanren==1.0.3
 multipledispatch==1.0.0
-netCDF4==1.7.2
+netCDF4==1.5.8
 numpy==1.21.6
 packaging==24.2
 pandas==2.0.3
