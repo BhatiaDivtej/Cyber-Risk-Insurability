@@ -6,7 +6,7 @@ pandas==1.4.3
 # PyMC and its dependencies
 pymc==5.12.0
 Theano-PyMC==1.1.2
-pytensor==2.14.2
+pytensor==2.19
 arviz>=0.13.0
 
 # Web framework
