@@ -7,7 +7,7 @@ pandas==1.4.3
 pymc==5.12.0
 Theano-PyMC==1.1.2
 pytensor==2.14.2
-arviz==0.12.1
+arviz>=0.13.0
 
 # Web framework
 Flask==2.2.5
