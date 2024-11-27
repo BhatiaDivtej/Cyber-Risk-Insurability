@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import lognorm
 import scipy.stats as stats
-import pymc as pm
+# import pymc as pm
 import warnings
 import logging
 import json
@@ -248,23 +248,23 @@ def calculate_lognormal_params(num_samples):
     # Return the posterior samples
     return mu_samples, sigma_samples
 
-def bayesian_estimate_mu_sigma(all_loss_amounts, num_samples):
-    # Take the logarithm of loss amounts
-    log_loss_amounts = np.log(all_loss_amounts)
+# def bayesian_estimate_mu_sigma(all_loss_amounts, num_samples):
+#     # Take the logarithm of loss amounts
+#     log_loss_amounts = np.log(all_loss_amounts)
     
-    # Define the model
-    with pm.Model() as model:
-        # Priors for mu and sigma
-        mu_prior = pm.Normal('mu', mu=np.mean(log_loss_amounts), sigma=1)
-        sigma_prior = pm.HalfNormal('sigma', sigma=1)
+#     # Define the model
+#     with pm.Model() as model:
+#         # Priors for mu and sigma
+#         mu_prior = pm.Normal('mu', mu=np.mean(log_loss_amounts), sigma=1)
+#         sigma_prior = pm.HalfNormal('sigma', sigma=1)
         
-        # Likelihood
-        observed_data = pm.Normal('observed_data', mu=mu_prior, sigma=sigma_prior, observed=log_loss_amounts)
+#         # Likelihood
+#         observed_data = pm.Normal('observed_data', mu=mu_prior, sigma=sigma_prior, observed=log_loss_amounts)
         
-        # Sample from the posterior
-        trace = pm.sample(draws=num_samples, tune=1000, chains=2, cores=1, return_inferencedata=True)
+#         # Sample from the posterior
+#         trace = pm.sample(draws=num_samples, tune=1000, chains=2, cores=1, return_inferencedata=True)
     
-    return trace
+#     return trace
 
 
 def calculate_subcategory_proportions(response_costs_df, litigated_cases_df, fines_penalties_df, economic_loss_df):

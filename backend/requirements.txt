@@ -3,12 +3,6 @@ numpy==1.22.4
 scipy==1.7.3
 pandas==1.4.3
 
-# PyMC and its dependencies
-pymc==5.12.0
-Theano-PyMC==1.1.2
-pytensor==2.19
-arviz>=0.13.0
-
 # Web framework
 Flask==2.2.5
 Flask-Cors==3.0.10
