@@ -15,6 +15,7 @@ const Assessments = ({ onSubmit, onPrevious, initialData }) => {
     cisAnswers: {},
     sigLiteAnswers: {}
   });
+  const BASE_URL = window.location.origin;
 
   const handleAssessmentSelect = (assessment) => {
     setSelectedAssessment(assessment);
@@ -49,7 +50,7 @@ const Assessments = ({ onSubmit, onPrevious, initialData }) => {
   //   formData.append('assessmentType', selectedAssessment);
 
   //   try {
-  //     const response = await fetch('http://127.0.0.1:5000/parse_assessment', {
+  //     const response = await fetch(`${BASE_URL}/parse_assessment`, {
   //       method: 'POST',
   //       body: formData,
   //     });
@@ -85,7 +86,7 @@ const Assessments = ({ onSubmit, onPrevious, initialData }) => {
     formData.append('assessmentType', selectedAssessment);
 
     try {
-      const response = await fetch('https://cyber-risk-insurability.onrender.com/parse_assessment', {
+      const response = await fetch(`${BASE_URL}/parse_assessment`, {
         method: 'POST',
         body: formData,
       });

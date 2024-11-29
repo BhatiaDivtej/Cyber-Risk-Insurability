@@ -14,7 +14,11 @@ const App = () => {
   const [assessmentData, setAssessmentData] = useState({});
   const [securityData, setSecurityData] = useState({});
   const [outputData, setOutputData] = useState({});
-
+  const backendUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://cyber-risk-insurability.onrender.com/submit'
+    : 'http://127.0.0.1:5000/submit';
+  const BASE_URL = window.location.origin;
+  
   const handleBusinessSubmit = (data) => {
     console.log("Business Submit Handler Called", data);
     setBusinessData(data);
@@ -27,6 +31,42 @@ const App = () => {
     setcurrentSection('security');
   };
 
+  // const handleSecuritySubmit = async (data) => {
+  //   console.log("Security Submit Handler Called", data);
+  //   setSecurityData(data);
+  //   setloading(true)
+    
+  //   const combinedData = {
+  //     businessQuestions: businessData,
+  //     assessmentData: assessmentData,
+  //     securityQuestions: securityData
+  //   };
+    
+  //   try {
+  //       const response = await fetch('http://127.0.0.1:5000/submit', {
+  //           method: 'POST',
+  //           headers: {
+  //               'Content-Type': 'application/json',
+  //           },
+  //           body: JSON.stringify(combinedData),
+  //       });
+
+  //       if (!response.ok){
+  //         throw new Error('Server Responses with error: ' + response.statusText);
+  //       }
+
+  //       const result = await response.json();
+  //       console.log("Response from server:", result);
+        
+  //       setOutputData(result);
+  //       setloading(false)  
+  //       setShowResults(true);
+        
+  //   } catch (error) {
+  //       console.error("Error sending data:", error);
+  //       setloading(false)
+  //   }
+  // };
   const handleSecuritySubmit = async (data) => {
     console.log("Security Submit Handler Called", data);
     setSecurityData(data);
@@ -35,11 +75,11 @@ const App = () => {
     const combinedData = {
       businessQuestions: businessData,
       assessmentData: assessmentData,
-      securityQuestions: securityData
+      securityQuestions: data // Use the current data passed in
     };
     
     try {
-        const response = await fetch('https://cyber-risk-insurability.onrender.com/submit', {
+        const response = await fetch(`${BASE_URL}/submit`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +88,8 @@ const App = () => {
         });
 
         if (!response.ok){
-          throw new Error('Server Responses with error: ' + response.statusText);
+          const errorText = await response.text();
+          throw new Error(`Server responded with error: ${response.status} - ${errorText}`);
         }
 
         const result = await response.json();

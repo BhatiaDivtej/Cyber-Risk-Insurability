@@ -181,7 +181,8 @@ class PentestReportParser:
         try:
             with pdfplumber.open(pdf_path) as pdf:
                 # Limit pages to first 10 to prevent timeout
-                for page_num, page in enumerate(pdf.pages[:10], 1):
+                # for page_num, page in enumerate(pdf.pages[:10], 1):
+                for page_num, page in enumerate(pdf.pages, 1):
                     self.logger.debug(f"Processing page {page_num}")
 
                     tables = page.extract_tables()
@@ -204,15 +205,11 @@ class PentestReportParser:
                             if vulnerability_data:
                                 all_vulnerabilities.append(vulnerability_data)
 
-                    # Prevent excessive processing
-                    if len(all_vulnerabilities) > 50:
-                        break
-
         except Exception as e:
             self.logger.error(f"Error processing PDF: {str(e)}")
             self.logger.error(traceback.format_exc())
             return []
-
+        
         return all_vulnerabilities
 
     def get_pentest_score(self, pdf_path):
@@ -254,3 +251,16 @@ class PentestReportParser:
         except Exception as e:
             self.logger.error(f"Score calculation error: {str(e)}")
             return 0.0
+
+def main():
+    """Example usage of the parser."""
+    parser = PentestReportParser()
+
+    # Example usage for single PDF
+    # pdf_path = "/content/Penetration Test.pdf"
+    pdf_path = "/Users/belagaam/Downloads/Penetration Test.pdf"
+    score = parser.get_pentest_score(pdf_path)
+    print(score)
+
+if __name__ == "__main__":
+    main()
