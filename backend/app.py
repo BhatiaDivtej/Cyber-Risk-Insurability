@@ -6,7 +6,22 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/parse_assessment": {
+        "origins": [
+            "http://localhost:5000",  # Vite default dev server
+            "http://127.0.0.1:5000",
+            "https://cyber-risk-insurability.onrender.com/"  # Replace with your actual frontend domain
+        ]
+    },
+    r"/submit": {
+        "origins": [
+            "http://localhost:5000", 
+            "http://127.0.0.1:5000",
+            "https://cyber-risk-insurability.onrender.com/"
+        ]
+    }
+})
 
 frontend_folder = os.path.join(os.getcwd(),'..','frontend')
 dist_folder = os.path.join(frontend_folder, 'dist')

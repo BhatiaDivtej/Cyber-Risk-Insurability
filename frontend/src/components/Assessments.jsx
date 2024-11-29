@@ -40,6 +40,42 @@ const Assessments = ({ onSubmit, onPrevious, initialData }) => {
     }
   };
 
+  // const handleFileSubmit = async () => {
+  //   setIsLoading(true);
+  //   setError('');
+
+  //   const formData = new FormData();
+  //   formData.append('file', uploadedFile);
+  //   formData.append('assessmentType', selectedAssessment);
+
+  //   try {
+  //     const response = await fetch('http://127.0.0.1:5000/parse_assessment', {
+  //       method: 'POST',
+  //       body: formData,
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error('Upload failed');
+  //     }
+
+  //     const result = await response.json();
+  //     setFormData(prev => ({
+  //       ...prev,
+  //       assessmentScore: result.score
+  //     }));
+
+  //     onSubmit({
+  //       assessmentType: selectedAssessment,
+  //       assessmentScore: result.score
+  //     });
+
+  //   } catch (error) {
+  //     setError('Uploaded file cannot be parsed. Please upload a different file or answer the assessment questions');
+  //     setUploadedFile(null);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
   const handleFileSubmit = async () => {
     setIsLoading(true);
     setError('');
@@ -49,7 +85,7 @@ const Assessments = ({ onSubmit, onPrevious, initialData }) => {
     formData.append('assessmentType', selectedAssessment);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/parse_assessment', {
+      const response = await fetch('https://cyber-risk-insurability.onrender.com/parse_assessment', {
         method: 'POST',
         body: formData,
       });
