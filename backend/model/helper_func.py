@@ -296,30 +296,30 @@ def calculate_subcategory_proportions(response_costs_df, litigated_cases_df, fin
     return subcategory_proportions
 
 
-def calculate_fines(regulations, num_records_lost, annual_revenue, weight=0.1):
+def calculate_fines(regulations, num_records_lost, annual_revenue):
     fines = 0
 
     for regulation in regulations:
         if regulation == 'FTC':
-            fine = 43792 * weight * num_records_lost
+            fine = max(43792 * 0.3 * num_records_lost, 0.04 * annual_revenue)
         elif regulation == 'SEC':
-            fine = 0.04 * annual_revenue
+            fine = 0.6 * max(20000000, 0.04 * annual_revenue)
         elif regulation == 'HIPAA':
             fine = max(25000 * num_records_lost, 1500000)
         elif regulation == 'OCC':
-            fine = 0.04 * annual_revenue
+            fine = 0.6 * max(20000000, 0.04 * annual_revenue)
         elif regulation == 'CCPA':
-            fine = 5000 + 750 * weight * num_records_lost
+            fine = 5000 * num_records_lost
         elif regulation == 'BIPA':
-            fine = 2500 * weight * num_records_lost
+            fine = 3000 * num_records_lost
         elif regulation == 'GDPR':
             fine = max(20000000, 0.04 * annual_revenue)
         elif regulation == 'UK ICO':
             fine = max(175000000, 0.04 * annual_revenue)
         elif regulation == 'OPC CA':
-            fine = max(10000, 0.04 * annual_revenue)
+            fine = max(5000 * 0.3 * num_records_lost, 0.04 * annual_revenue)
         elif regulation == 'NYDFS Part 500':
-            fine = max(250000, 0.04 * annual_revenue)
+            fine = max(12000 * 0.3 * num_records_lost, 0.04 * annual_revenue)
         else:
             fine = 0  # Unknown regulation
         fines += fine
